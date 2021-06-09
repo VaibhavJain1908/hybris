@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at 27-May-2021, 10:32:40 PM                    ---
+ * --- Generated at 01-Jun-2021, 11:14:19 PM                    ---
  * ----------------------------------------------------------------
  *  
  * Copyright (c) 2021 SAP SE or an SAP affiliate company. All rights reserved.
@@ -22,14 +22,40 @@ public class GeneratedTrainingCoreConstants
 		public static final String APPARELSIZEVARIANTPRODUCT = "ApparelSizeVariantProduct".intern();
 		public static final String APPARELSTYLEVARIANTPRODUCT = "ApparelStyleVariantProduct".intern();
 		public static final String ELECTRONICSCOLORVARIANTPRODUCT = "ElectronicsColorVariantProduct".intern();
+		public static final String SALESREPRESENTATIVE = "SalesRepresentative".intern();
+		public static final String SERVICE = "Service".intern();
+		public static final String SERVICETYPE = "ServiceType".intern();
+		public static final String SRTYPE = "SRType".intern();
 		public static final String SWATCHCOLORENUM = "SwatchColorEnum".intern();
 	}
 	public static class Attributes
 	{
-		// no constants defined.
+		public static class Customer
+		{
+			public static final String SALESREPRESENTATIVE = "salesRepresentative".intern();
+		}
+		public static class Product
+		{
+			public static final String BRAND = "brand".intern();
+			public static final String SERVICE = "service".intern();
+			public static final String WEIGHT = "weight".intern();
+		}
 	}
 	public static class Enumerations
 	{
+		public static class ServiceType
+		{
+			public static final String BASIC = "BASIC".intern();
+			public static final String BASICONSITE = "BASICONSITE".intern();
+			public static final String ADVANCED = "ADVANCED".intern();
+		}
+		public static class SRType
+		{
+			public static final String CHECK = "CHECK".intern();
+			public static final String COMMISSIONED = "COMMISSIONED".intern();
+			public static final String SALARIED = "SALARIED".intern();
+			public static final String NONPROFIT = "NONPROFIT".intern();
+		}
 		public static class SwatchColorEnum
 		{
 			public static final String BLACK = "BLACK".intern();
@@ -45,6 +71,11 @@ public class GeneratedTrainingCoreConstants
 			public static final String WHITE = "WHITE".intern();
 			public static final String YELLOW = "YELLOW".intern();
 		}
+	}
+	public static class Relations
+	{
+		public static final String PRODUCT2SERVICE = "Product2Service".intern();
+		public static final String SALESREPRESENTATIVE2CUSTOMERS = "SalesRepresentative2Customers".intern();
 	}
 	
 	protected GeneratedTrainingCoreConstants()

@@ -3,21 +3,19 @@
  */
 package de.hybris.training.backoffice.actions;
 
+import com.hybris.backoffice.widgets.notificationarea.NotificationService;
+import com.hybris.backoffice.widgets.notificationarea.event.NotificationEvent;
+import com.hybris.cockpitng.actions.ActionContext;
+import com.hybris.cockpitng.actions.ActionResult;
+import com.hybris.cockpitng.actions.CockpitAction;
 import de.hybris.platform.basecommerce.enums.ConsignmentStatus;
 import de.hybris.platform.ordersplitting.model.ConsignmentModel;
 import de.hybris.platform.ordersplitting.model.ConsignmentProcessModel;
 import de.hybris.platform.processengine.BusinessProcessService;
 import de.hybris.platform.servicelayer.model.ModelService;
 
-import java.util.Iterator;
-
 import javax.annotation.Resource;
-
-import com.hybris.backoffice.widgets.notificationarea.NotificationService;
-import com.hybris.backoffice.widgets.notificationarea.event.NotificationEvent;
-import com.hybris.cockpitng.actions.ActionContext;
-import com.hybris.cockpitng.actions.ActionResult;
-import com.hybris.cockpitng.actions.CockpitAction;
+import java.util.Iterator;
 
 
 public class ConfirmPickupAction implements CockpitAction<ConsignmentModel, Object>
