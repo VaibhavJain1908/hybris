@@ -1,0 +1,18 @@
+-- Fetching products with weight greater than 100
+select * from {product} where {weight} > 100
+
+-- Fetching all categories which contain a product
+select distinct {c.code}
+    from {product as p JOIN categoryproductrelation as cpr ON {p.pk} = {cpr.target}
+        JOIN category as c ON {c.pk} = {cpr.source} }
+
+-- Fetching all products within a category
+select distinct {p.code}
+    from {product as p JOIN categoryproductrelation as cpr ON {p.pk} = {cpr.target}
+        JOIN category as c ON {c.pk} = {cpr.source} } where {c.code} = 'sunglasses'
+
+-- Fetching all customers who created/modified cart within last 24 hours
+select * from {customer} where pk in
+({{ select P_USER from {cart} where modifiedts>DATE_SUB(CURDATE(), INTERVAL 1 DAY)
+    or createdts>DATE_SUB(CURDATE(), INTERVAL 1 DAY) }})
+
